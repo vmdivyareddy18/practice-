@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project 4 — Color Swatches</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Color Swatches</h1>
+    <p class="lead">Add a color (hex) to build a small palette. Click a swatch to copy the hex.</p>
+
+    <div class="controls">
+      <input id="colorInput" placeholder="#3498db" aria-label="Color hex" />
+      <button id="add">Add</button>
+      <button id="clear">Clear</button>
+    </div>
+
+    <ul id="swatches" class="swatches" aria-live="polite"></ul>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
