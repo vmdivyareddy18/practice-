@@ -1,3 +1,11 @@
+function toHex(value) {
+  return value.toString(16).padStart(2, "0");
+}
+
+function rgbToHex(r, g, b) {
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
 const redInput = document.getElementById('red');
 const greenInput = document.getElementById('green');
 const blueInput = document.getElementById('blue');
@@ -6,6 +14,7 @@ const greenValue = document.getElementById('greenValue');
 const blueValue = document.getElementById('blueValue');
 const swatch = document.getElementById('swatch');
 const colorInfo = document.getElementById('colorInfo');
+const hexInfo = document.getElementById('hexInfo');
 const copyButton = document.getElementById('copyButton');
 const resetButton = document.getElementById('resetButton');
 
@@ -19,6 +28,7 @@ function updateColor() {
   blueValue.textContent = b;
   swatch.style.backgroundColor = rgb;
   colorInfo.textContent = rgb;
+  hexInfo.textContent = rgbToHex(r, g, b);
 }
 
 copyButton.addEventListener('click', () => {
