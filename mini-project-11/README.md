@@ -19,3 +19,6 @@ This color mixer supports live updates, copyable values, and reset controls.
 - Choose preset colors like Tomato, Emerald, and Sky.
 - Copy the HEX value directly with one click.
 - Status messages confirm clipboard actions.
+
+
+Built using semantic HTML and CSS custom properties for a polished UI experience.
