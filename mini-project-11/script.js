@@ -18,6 +18,7 @@ const hexInfo = document.getElementById('hexInfo');
 const copyButton = document.getElementById('copyButton');
 const randomButton = document.getElementById('randomButton');
 const resetButton = document.getElementById('resetButton');
+const statusMessage = document.getElementById('statusMessage');
 const presetButtons = document.querySelectorAll('.preset-button');
 
 function updateColor() {
@@ -37,7 +38,8 @@ copyButton.addEventListener('click', () => {
   navigator.clipboard.writeText(colorInfo.textContent)
     .then(() => {
       copyButton.textContent = 'Copied!';
-      setTimeout(() => { copyButton.textContent = 'Copy Color'; }, 1200);
+      statusMessage.textContent = 'Copied to clipboard';
+      setTimeout(() => { copyButton.textContent = 'Copy Color'; statusMessage.textContent = ''; }, 1200);
     })
     .catch(() => {
       copyButton.textContent = 'Copy Failed';
