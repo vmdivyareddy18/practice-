@@ -34,6 +34,7 @@ function updateColor() {
   swatch.style.backgroundColor = rgb;
   colorInfo.textContent = rgb;
   hexInfo.textContent = rgbToHex(r, g, b);
+  saveColor(r, g, b);
 }
 
 copyButton.addEventListener('click', () => {
@@ -54,9 +55,28 @@ function resetColor() {
   greenInput.value = defaultColor.g;
   blueInput.value = defaultColor.b;
   updateColor();
+loadSavedColor();
 }
 
 resetButton.addEventListener('click', resetColor);
+
+function saveColor(r, g, b) {
+  localStorage.setItem('miniProject11Color', `${r},${g},${b}`);
+}
+
+function loadSavedColor() {
+  const saved = localStorage.getItem('miniProject11Color');
+  if (saved) {
+    const [r, g, b] = saved.split(',').map(Number);
+    redInput.value = r;
+    greenInput.value = g;
+    blueInput.value = b;
+    updateColor();
+  } else {
+    resetColor();
+  }
+}
+
 
 [redInput, greenInput, blueInput].forEach((input) => {
   input.addEventListener('input', updateColor);
