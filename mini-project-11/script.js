@@ -38,7 +38,7 @@ function updateColor() {
 }
 
 copyButton.addEventListener('click', () => {
-  navigator.clipboard.writeText(colorInfo.textContent)
+  navigator.clipboard.writeText(hexInfo.textContent)
     .then(() => {
       copyButton.textContent = 'Copied!';
       statusMessage.textContent = 'Copied to clipboard';
