@@ -102,3 +102,8 @@ button:hover {
 button:active {
   transform: translateY(0);
 }
+
+.hex-info {
+  font-size: 0.95rem;
+  color: #475569;
+}
