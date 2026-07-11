@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Project 11: Color Mixer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <h1>Color Mixer</h1>
+      <p>Use the sliders to mix a custom RGB color.</p>
+    </header>
+
+    <section class="controls">
+      <label>
+        Red
+        <input type="range" id="red" min="0" max="255" value="160" />
+        <span class="value" id="redValue">160</span>
+      </label>
+      <label>
+        Green
+        <input type="range" id="green" min="0" max="255" value="180" />
+        <span class="value" id="greenValue">180</span>
+      </label>
+      <label>
+        Blue
+        <input type="range" id="blue" min="0" max="255" value="200" />
+        <span class="value" id="blueValue">200</span>
+      </label>
+    </section>
+
+    <section class="output">
+      <div class="swatch" id="swatch"></div>
+      <div class="color-info" id="colorInfo">rgb(160, 180, 200)</div>
+      <button id="copyButton">Copy Color</button>
+      <button id="resetButton" type="button">Reset</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
