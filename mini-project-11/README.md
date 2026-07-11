@@ -11,3 +11,5 @@ A compact HTML/CSS/JS app for blending RGB colors with sliders and copying the C
 ## Usage
 
 Open `index.html` in a browser and interact with the sliders.
+
+This color mixer supports live updates, copyable values, and reset controls.
