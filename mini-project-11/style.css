@@ -107,3 +107,20 @@ button:active {
   font-size: 0.95rem;
   color: #475569;
 }
+
+
+:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.85);
+  outline-offset: 3px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+button {
+  min-width: 140px;
+}
