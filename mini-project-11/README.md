@@ -13,3 +13,9 @@ A compact HTML/CSS/JS app for blending RGB colors with sliders and copying the C
 Open `index.html` in a browser and interact with the sliders.
 
 This color mixer supports live updates, copyable values, and reset controls.
+
+## New Features
+- Save the last selected RGB color automatically in local storage.
+- Choose preset colors like Tomato, Emerald, and Sky.
+- Copy the HEX value directly with one click.
+- Status messages confirm clipboard actions.
