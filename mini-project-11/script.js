@@ -16,7 +16,9 @@ const swatch = document.getElementById('swatch');
 const colorInfo = document.getElementById('colorInfo');
 const hexInfo = document.getElementById('hexInfo');
 const copyButton = document.getElementById('copyButton');
+const randomButton = document.getElementById('randomButton');
 const resetButton = document.getElementById('resetButton');
+const presetButtons = document.querySelectorAll('.preset-button');
 
 function updateColor() {
   const r = Number(redInput.value);
@@ -55,3 +57,13 @@ resetButton.addEventListener('click', () => {
 });
 
 updateColor();
+
+
+presetButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    redInput.value = Number(button.dataset.r);
+    greenInput.value = Number(button.dataset.g);
+    blueInput.value = Number(button.dataset.b);
+    updateColor();
+  });
+});
