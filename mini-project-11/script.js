@@ -1,3 +1,5 @@
+const defaultColor = { r: 160, g: 180, b: 200 };
+
 function toHex(value) {
   return value.toString(16).padStart(2, "0");
 }
@@ -47,12 +49,14 @@ copyButton.addEventListener('click', () => {
     });
 });
 
-resetButton.addEventListener('click', () => {
-  redInput.value = 160;
-  greenInput.value = 180;
-  blueInput.value = 200;
+function resetColor() {
+  redInput.value = defaultColor.r;
+  greenInput.value = defaultColor.g;
+  blueInput.value = defaultColor.b;
   updateColor();
-});
+}
+
+resetButton.addEventListener('click', resetColor);
 
 [redInput, greenInput, blueInput].forEach((input) => {
   input.addEventListener('input', updateColor);
