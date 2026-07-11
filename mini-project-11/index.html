@@ -16,17 +16,17 @@
     <section class="controls">
       <label>
         Red
-        <input type="range" id="red" min="0" max="255" value="160" />
+        <input type="range" id="red" min="0" max="255" value="160" aria-label="Red channel value" />
         <span class="value" id="redValue">160</span>
       </label>
       <label>
         Green
-        <input type="range" id="green" min="0" max="255" value="180" />
+        <input type="range" id="green" min="0" max="255" value="180" aria-label="Green channel value" />
         <span class="value" id="greenValue">180</span>
       </label>
       <label>
         Blue
-        <input type="range" id="blue" min="0" max="255" value="200" />
+        <input type="range" id="blue" min="0" max="255" value="200" aria-label="Blue channel value" />
         <span class="value" id="blueValue">200</span>
       </label>
     </section>
@@ -35,7 +35,7 @@
       <div class="swatch" id="swatch"></div>
       <div class="color-info" id="colorInfo">rgb(160, 180, 200)</div>
       <div class="hex-info" id="hexInfo">#a0b4c8</div>
-      <button id="copyButton">Copy Color</button>
+      <button id="copyButton" type="button">Copy Color</button>
       <button id="resetButton" type="button">Reset</button>
     </section>
   </main>
