@@ -6,3 +6,4 @@ console.log('line 5');
 console.log('line 6');
 console.log('line 7');
 console.log('line 8');
+console.log('line 9');
