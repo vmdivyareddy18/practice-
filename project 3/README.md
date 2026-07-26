@@ -11,3 +11,5 @@ Features:
 - Responsive and accessible (aria-live, labels)
 
 Open `index.html` in a browser.
+
+Note: This project is a static demo — no build step or CI required.
