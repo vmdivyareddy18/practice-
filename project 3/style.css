@@ -49,6 +49,12 @@ input#newText {
 button {
     background: var(--accent);
     color: #fff;
+    @media (max-width:480px){
+      body{padding:12px}
+      #app{max-width:100%}
+      .controls{flex-direction:column;align-items:stretch}
+      .controls button{width:100%}
+    }
     border: none;
     padding: 8px 12px;
     border-radius: 6px
