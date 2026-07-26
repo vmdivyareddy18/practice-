@@ -13,8 +13,9 @@
     </header>
 
     <section class="controls">
-      <input id="newText" placeholder="Type a note and press Add" />
-      <button id="addBtn">Add</button>
+      <label for="newText" class="visually-hidden">New note</label>
+      <input id="newText" placeholder="Type a note and press Add" aria-label="New note" />
+      <button id="addBtn" aria-label="Add note">Add</button>
     </section>
 
     <ul id="list" class="list" aria-live="polite"></ul>
