@@ -79,3 +79,18 @@ clearBtn.addEventListener('click', () => {
     save();
     input.focus();
 });
+
+const exportBtn = document.getElementById('exportBtn');
+const importBtn = document.getElementById('importBtn');
+
+exportBtn.addEventListener('click',()=>{
+    const arr = Array.from(list.querySelectorAll('.item > div > span')).map(s=>s.textContent);
+    const blob = new Blob([JSON.stringify(arr, null, 2)],{type:'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href=url; a.download='notes.json'; a.click(); URL.revokeObjectURL(url);
+});
+
+importBtn.addEventListener('click',()=>{
+    const text = prompt('Paste JSON array of notes:');
+    if(!text) return; try{const arr=JSON.parse(text); list.innerHTML=''; arr.forEach(t=>list.appendChild(createItem(t))); save(); updateCount()}catch(e){alert('Invalid JSON')}
+});

@@ -1,27 +1,31 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Project 3 - Mini App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Project 3 - Mini App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main id="app">
-    <header>
-      <h1>Project 3 — Mini Notes</h1>
-    </header>
+    <main id="app">
+        <header>
+            <h1>Project 3 — Mini Notes</h1>
+        </header>
 
-    <section class="controls">
-      <label for="newText" class="visually-hidden">New note</label>
-      <input id="newText" placeholder="Type a note and press Add" aria-label="New note" />
-      <button id="addBtn" aria-label="Add note">Add</button>
-      <button id="clearBtn" aria-label="Clear all notes">Clear</button>
-    </section>
-    <div class="meta">Notes: <span id="count">0</span></div>
+        <section class="controls">
+            <label for="newText" class="visually-hidden">New note</label>
+            <input id="newText" placeholder="Type a note and press Add" aria-label="New note" />
+            <button id="addBtn" aria-label="Add note">Add</button>
+            <button id="clearBtn" aria-label="Clear all notes">Clear</button>
+        </section>
+        <div class="meta">Notes: <span id="count">0</span></div>
+        <div style="margin-top:8px;display:flex;gap:8px"><button id="exportBtn">Export JSON</button><button id="importBtn">Import JSON</button></div>
 
-    <ul id="list" class="list" aria-live="polite"></ul>
-  </main>
-  <script src="script.js"></script>
+        <ul id="list" class="list" aria-live="polite"></ul>
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
