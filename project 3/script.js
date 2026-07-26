@@ -35,7 +35,10 @@ function createItem(text) {
 addBtn.addEventListener('click', () => {
     const v = input.value.trim();
     if (!v) return;
-    list.appendChild(createItem(v));
+    const it = createItem(v);
+    it.classList.add('added');
+    list.appendChild(it);
+    setTimeout(()=>it.classList.remove('added'),20);
     save();
     input.value = '';
     input.focus();
