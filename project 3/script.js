@@ -1,5 +1,6 @@
 const input = document.getElementById('newText');
 const addBtn = document.getElementById('addBtn');
+const clearBtn = document.getElementById('clearBtn');
 const list = document.getElementById('list');
 
 function createItem(text){
@@ -40,3 +41,9 @@ function load(){
 }
 
 load();
+
+clearBtn.addEventListener('click',()=>{
+  list.innerHTML='';
+  save();
+  input.focus();
+});
