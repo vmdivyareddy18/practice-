@@ -45,6 +45,10 @@ addBtn.addEventListener('click', () => {
 });
 
 input.addEventListener('keydown', (e) => { if (e.key === 'Enter') addBtn.click(); });
+// Ctrl/Cmd+K to focus the input
+document.addEventListener('keydown',(e)=>{
+    if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='k'){e.preventDefault(); input.focus();}
+});
 
 // seed demo data
 ['Welcome to Project 3', 'Try adding notes'].forEach(t => list.appendChild(createItem(t)));
