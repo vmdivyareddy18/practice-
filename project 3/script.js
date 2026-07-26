@@ -2,6 +2,7 @@ const input = document.getElementById('newText');
 const addBtn = document.getElementById('addBtn');
 const clearBtn = document.getElementById('clearBtn');
 const list = document.getElementById('list');
+const countEl = document.getElementById('count');
 
 function createItem(text){
   const li = document.createElement('li');
@@ -41,6 +42,18 @@ function load(){
 }
 
 load();
+
+function updateCount(){
+  countEl.textContent = list.querySelectorAll('.item').length;
+}
+const origCreate = createItem;
+createItem = function(text){
+  const el = origCreate(text);
+  // ensure count updates when items change
+  el.querySelector('button').addEventListener('click',()=>setTimeout(updateCount,0));
+  return el;
+}
+updateCount();
 
 clearBtn.addEventListener('click',()=>{
   list.innerHTML='';
