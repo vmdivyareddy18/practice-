@@ -9,10 +9,18 @@ function createItem(text){
   li.className = 'item';
   const span = document.createElement('span');
   span.textContent = text;
+  const time = document.createElement('small');
+  time.style.marginLeft='12px';
+  time.style.color='#666';
+  time.textContent = new Date().toLocaleTimeString();
   const btn = document.createElement('button');
   btn.textContent = 'Remove';
   btn.addEventListener('click',()=>li.remove());
-  li.appendChild(span);li.appendChild(btn);
+  const left = document.createElement('div');
+  left.style.display='flex';
+  left.style.alignItems='center';
+  left.appendChild(span);left.appendChild(time);
+  li.appendChild(left);li.appendChild(btn);
   return li;
 }
 
