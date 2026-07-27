@@ -16,9 +16,13 @@ function render() {
 }
 
 function observeInView() {
-    const obs = new IntersectionObserver((items) => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.timeline-item').forEach(n => n.classList.add('in-view'));
+        return;
+    }
+    const obs = new IntersectionObserver((items, observer) => {
         items.forEach(i => {
-            if (i.isIntersecting) { i.target.classList.add('in-view'); }
+            if (i.isIntersecting) { i.target.classList.add('in-view'); observer.unobserve(i.target); }
         });
     }, { threshold: 0.15 });
     document.querySelectorAll('.timeline-item').forEach(n => obs.observe(n));
