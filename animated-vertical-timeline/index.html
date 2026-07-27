@@ -1,23 +1,31 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Animated Vertical Timeline</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Animated Vertical Timeline</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="timeline-app">
-    <header>
-      <h1>Animated Vertical Timeline</h1>
-      <p class="subtitle">A small demo using HTML, CSS and JavaScript</p>
-    </header>
+    <main class="timeline-app">
+        <header>
+            <h1>Animated Vertical Timeline</h1>
+            <p class="subtitle">A small demo using HTML, CSS and JavaScript</p>
+        </header>
 
-    <section id="timeline" class="timeline" aria-label="Event timeline">
-      <!-- Items will be rendered by script.js -->
-    </section>
+        <section id="timeline" class="timeline" aria-label="Event timeline">
+            <article class="timeline-item fade-in">
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <h3>Prepared markup <small style="float:right;color:var(--muted)">10:40</small></h3>
+                <p>Added a static timeline item as a starting point.</p>
+            </article>
+            <!-- Items will be rendered by script.js -->
+        </section>
 
-    <script src="script.js"></script>
-  </main>
+        <script src="script.js"></script>
+    </main>
 </body>
+
 </html>
