@@ -5,6 +5,12 @@ const entries = [
     {time:'2023', title:'Iteration', desc:'Improved interactions and accessibility.'}
 ];
 
+function formatTime(t){
+    // simple human-friendly formatting for demo
+    if(/^[0-9]{4}$/.test(t)) return t;
+    return String(t);
+}
+
 const container = document.getElementById('timeline');
 function render() {
     entries.forEach(e => {
@@ -12,7 +18,7 @@ function render() {
         el.className = 'timeline-item fade-in';
         el.tabIndex = 0;
         el.setAttribute('role','article');
-        el.innerHTML = `<span class="timeline-marker" aria-hidden="true"></span><h3>${e.title} <time datetime="${e.time}" style="float:right;color:var(--muted)">${e.time}</time></h3><p>${e.desc}</p>`;
+        el.innerHTML = `<span class="timeline-marker" aria-hidden="true"></span><h3>${e.title} <time datetime="${e.time}" style="float:right;color:var(--muted)">${formatTime(e.time)}</time></h3><p>${e.desc}</p>`;
         container.appendChild(el);
     });
 }
