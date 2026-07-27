@@ -5,6 +5,8 @@ const entries = [
     {time:'2023', title:'Iteration', desc:'Improved interactions and accessibility.'}
 ];
 
+entries.push({time:'2024', title:'Maintenance', desc:'Ongoing improvements and bug fixes.'});
+
 function formatTime(t){
     // simple human-friendly formatting for demo
     if(/^[0-9]{4}$/.test(t)) return t;
