@@ -86,7 +86,7 @@ header {
 .fade-in {
     opacity: 0;
     transform: translateY(14px);
-    transition: all .6s cubic-bezier(.2, .9, .2, 1)
+    transition: all .55s cubic-bezier(.2, .9, .2, 1);
 }
     .timeline-marker {
         position: absolute;
