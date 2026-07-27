@@ -6,6 +6,11 @@
     color-scheme: dark;
 }
 
+/* Responsive adjustments */
+body{font-size:16px}
+@media (max-width:420px){body{font-size:15px}}
+
+
 * {
     box-sizing: border-box
 }
