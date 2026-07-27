@@ -10,7 +10,7 @@ function render() {
     entries.forEach(e => {
         const el = document.createElement('article');
         el.className = 'timeline-item fade-in';
-        el.innerHTML = `<span class="timeline-marker" aria-hidden="true"></span><h3>${e.title} <small style="float:right;color:var(--muted)">${e.time}</small></h3><p>${e.desc}</p>`;
+        el.innerHTML = `<span class="timeline-marker" aria-hidden="true"></span><h3>${e.title} <time datetime="${e.time}" style="float:right;color:var(--muted)">${e.time}</time></h3><p>${e.desc}</p>`;
         container.appendChild(el);
     });
 }
