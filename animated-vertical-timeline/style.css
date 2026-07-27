@@ -12,6 +12,9 @@ body{font-size:16px}
 
 .timeline-item:focus-visible{outline:3px solid rgba(124,92,255,0.15);outline-offset:3px;transform:translateY(-4px)}
 
+/* visually-hidden for small accessible text */
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
 
 * {
     box-sizing: border-box
