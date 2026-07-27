@@ -96,7 +96,7 @@ header {
         height: 12px;
         border-radius: 50%;
         background: var(--accent);
-        box-shadow: 0 0 0 6px rgba(124, 92, 255, 0.06), 0 2px 8px rgba(7, 9, 14, 0.6);
+        box-shadow: 0 0 0 6px rgba(124, 92, 255, 0.08), 0 4px 10px rgba(7, 9, 14, 0.65);
     }
     }
 
