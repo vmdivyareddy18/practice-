@@ -8,6 +8,15 @@ const swatch = document.getElementById('swatch');
 const colorInfo = document.getElementById('colorInfo');
 const copyButton = document.getElementById('copyButton');
 const resetButton = document.getElementById('resetButton');
+const hexInfo = document.getElementById('hexInfo');
+
+function componentToHex(value) {
+  return value.toString(16).padStart(2, '0');
+}
+
+function rgbToHex(r, g, b) {
+  return `#${componentToHex(r)}${componentToHex(g)}${componentToHex(b)}`;
+}
 
 function updateColor() {
   const r = Number(redInput.value);
@@ -19,7 +28,9 @@ function updateColor() {
   blueValue.textContent = b;
   swatch.style.backgroundColor = rgb;
   colorInfo.textContent = rgb;
+  hexInfo.textContent = rgbToHex(r, g, b);
 }
+
 
 copyButton.addEventListener('click', () => {
   navigator.clipboard.writeText(colorInfo.textContent)
