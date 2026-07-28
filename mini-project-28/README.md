@@ -18,3 +18,4 @@ Open `index.html` in a browser.
 2. See the preview update instantly.
 3. Click Copy Color or press C.
 4. Click Reset or press R to restore defaults.
+5. Use preset buttons to choose a starting palette.
