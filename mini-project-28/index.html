@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="app-shell">
+  <main class="app-shell" role="main">
     <header>
       <h1>Color Mixer</h1>
       <p>Use the sliders to mix a custom RGB color. Press <strong>C</strong> to copy and <strong>R</strong> to reset.</p>
     </header>
 
-    <section class="controls">
+    <section class="controls" aria-label="Color controls">
       <label>
         Red
         <input type="range" id="red" min="0" max="255" value="150" />
@@ -37,7 +37,7 @@
       <button class="preset" data-color="114, 216, 170">Mint</button>
     </section>
 
-    <section class="output">
+    <section class="output" aria-label="Color preview">
       <div class="swatch" id="swatch"></div>
       <div class="color-info" id="colorInfo">rgb(150, 200, 220)</div>
       <div class="hex-info" id="hexInfo">#96c8dc</div>
