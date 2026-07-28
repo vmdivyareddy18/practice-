@@ -66,6 +66,17 @@ document.addEventListener('keydown', (event) => {
   input.addEventListener('input', updateColor);
 });
 
+const presetButtons = document.querySelectorAll('.preset');
+presetButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const [r, g, b] = button.dataset.color.split(',').map(Number);
+    redInput.value = r;
+    greenInput.value = g;
+    blueInput.value = b;
+    updateColor();
+  });
+});
+
 updateColor();
 
 document.addEventListener('keydown', (event) => {
