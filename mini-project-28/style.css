@@ -130,3 +130,15 @@ button:active {
   transform: translateY(-1px);
   border-color: var(--accent);
 }
+
+@media (max-width: 520px) {
+  .app-shell {
+    padding: 22px;
+  }
+  .presets {
+    gap: 8px;
+  }
+  button, .preset {
+    width: 100%;
+  }
+}
