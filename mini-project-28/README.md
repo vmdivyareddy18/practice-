@@ -11,3 +11,10 @@ A standalone HTML/CSS/JS color mixer that updates a preview and shows the curren
 ## Run
 
 Open `index.html` in a browser.
+
+## Usage
+
+1. Drag the Red, Green, and Blue sliders.
+2. See the preview update instantly.
+3. Click Copy Color or press C.
+4. Click Reset or press R to restore defaults.
