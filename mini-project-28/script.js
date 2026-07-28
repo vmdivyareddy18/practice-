@@ -9,6 +9,7 @@ const colorInfo = document.getElementById('colorInfo');
 const copyButton = document.getElementById('copyButton');
 const resetButton = document.getElementById('resetButton');
 const hexInfo = document.getElementById('hexInfo');
+const presetButtons = document.querySelectorAll('.preset');
 
 function componentToHex(value) {
   return value.toString(16).padStart(2, '0');
@@ -31,7 +32,6 @@ function updateColor() {
   hexInfo.textContent = rgbToHex(r, g, b);
 }
 
-
 copyButton.addEventListener('click', () => {
   navigator.clipboard.writeText(colorInfo.textContent)
     .then(() => {
@@ -49,35 +49,23 @@ resetButton.addEventListener('click', () => {
   greenInput.value = 200;
   blueInput.value = 220;
   updateColor();
-
-document.addEventListener('keydown', (event) => {
-  if (event.key.toLowerCase() === 'c') {
-    event.preventDefault();
-    copyButton.click();
-  }
-  if (event.key.toLowerCase() === 'r') {
-    event.preventDefault();
-    resetButton.click();
-  }
-});
 });
 
 [redInput, greenInput, blueInput].forEach((input) => {
   input.addEventListener('input', updateColor);
 });
 
-const presetButtons = document.querySelectorAll('.preset');
 presetButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const [r, g, b] = button.dataset.color.split(',').map(Number);
     redInput.value = r;
     greenInput.value = g;
     blueInput.value = b;
+    presetButtons.forEach((other) => other.classList.remove('active'));
+    button.classList.add('active');
     updateColor();
   });
 });
-
-updateColor();
 
 document.addEventListener('keydown', (event) => {
   if (event.key.toLowerCase() === 'c') {
@@ -89,3 +77,5 @@ document.addEventListener('keydown', (event) => {
     resetButton.click();
   }
 });
+
+updateColor();
