@@ -49,6 +49,17 @@ resetButton.addEventListener('click', () => {
   greenInput.value = 200;
   blueInput.value = 220;
   updateColor();
+
+document.addEventListener('keydown', (event) => {
+  if (event.key.toLowerCase() === 'c') {
+    event.preventDefault();
+    copyButton.click();
+  }
+  if (event.key.toLowerCase() === 'r') {
+    event.preventDefault();
+    resetButton.click();
+  }
+});
 });
 
 [redInput, greenInput, blueInput].forEach((input) => {
@@ -56,3 +67,14 @@ resetButton.addEventListener('click', () => {
 });
 
 updateColor();
+
+document.addEventListener('keydown', (event) => {
+  if (event.key.toLowerCase() === 'c') {
+    event.preventDefault();
+    copyButton.click();
+  }
+  if (event.key.toLowerCase() === 'r') {
+    event.preventDefault();
+    resetButton.click();
+  }
+});
