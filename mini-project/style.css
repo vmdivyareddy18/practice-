@@ -106,7 +106,7 @@ input[type="range"] {
 
 
 button {
-    width: fit-content;
+    min-width: 160px;
     padding: 12px 20px;
     border: none;
     border-radius: 999px;
