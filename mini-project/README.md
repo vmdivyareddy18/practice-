@@ -16,3 +16,9 @@ A small interactive web app for mixing RGB values with sliders and copying the r
 2. The preview updates instantly.
 3. Click the copy button to copy the CSS color string.
 4. Use the reset button to return to the default color.
+
+## Notes
+
+- The interface is built with plain HTML, CSS, and JavaScript.
+- The preview uses a live background color and numeric color display.
+- The project is intentionally small and easy to extend.
