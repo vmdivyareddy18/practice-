@@ -43,4 +43,12 @@ function copyColor() {
 });
 
 copyButton.addEventListener('click', copyColor);
+const resetButton = document.getElementById('resetButton');
+function resetColors() {
+    redInput.value = 120;
+    greenInput.value = 180;
+    blueInput.value = 220;
+    updateColor();
+}
+resetButton.addEventListener('click', resetColors);
 updateColor();
