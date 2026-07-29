@@ -8,6 +8,16 @@ const swatch = document.getElementById('swatch');
 const colorInfo = document.getElementById('colorInfo');
 const copyButton = document.getElementById('copyButton');
 
+function toHex(value) {
+    return value.toString(16).padStart(2, '0');
+}
+
+function toHexColor(r, g, b) {
+    return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+const hexValue = document.getElementById('hexValue');
+
 function updateColor() {
     const r = Number(redInput.value);
     const g = Number(greenInput.value);
@@ -19,7 +29,9 @@ function updateColor() {
     blueValue.textContent = b;
     swatch.style.backgroundColor = rgb;
     colorInfo.textContent = rgb;
+  hexValue.textContent = toHexColor(r, g, b);
 }
+
 
 function copyColor() {
     const text = colorInfo.textContent;
