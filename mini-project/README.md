@@ -28,3 +28,9 @@ A small interactive web app for mixing RGB values with sliders and copying the r
 - Add preset palettes for quick selection.
 - Add a hex color input field.
 - Add HSL controls for alternative color editing.
+
+### Accessibility
+
+- All interactive controls include accessible labels.
+- Live updates announce color changes.
+- Focus styles make keyboard navigation visible.
