@@ -22,6 +22,7 @@ A small interactive web app for mixing RGB values with sliders and copying the r
 - The interface is built with plain HTML, CSS, and JavaScript.
 - The preview uses a live background color and numeric color display.
 - The project is intentionally small and easy to extend.
+- Use this mini-project as a clean starter for similar widgets.
 
 ## Extendable Ideas
 
