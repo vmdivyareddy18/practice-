@@ -114,6 +114,11 @@ button:hover {
     filter: brightness(1.05);
 }
 
+button:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.6);
+    outline-offset: 3px;
+}
+
 button:active {
     transform: translateY(0);
 }
