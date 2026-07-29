@@ -97,6 +97,14 @@ input[type="range"] {
     background: #f8fafc;
 }
 
+.color-info .hex-value {
+    display: block;
+    margin-top: 8px;
+    color: #0f172a;
+    font-size: 0.95rem;
+}
+
+
 button {
     width: fit-content;
     padding: 12px 20px;
