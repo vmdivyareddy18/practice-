@@ -82,6 +82,13 @@ input[type="range"] {
     transition: background-color 0.3s ease;
 }
 
+.button-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .color-info {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     padding: 16px 18px;
