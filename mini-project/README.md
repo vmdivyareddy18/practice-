@@ -25,6 +25,11 @@ A small interactive web app for mixing RGB values with sliders and copying the r
 
 ## Extendable Ideas
 
+- Add a live hex input field for direct color entry.
+- Add keyboard shortcuts for reset and copy.
+
+## Extendable Ideas
+
 - Add preset palettes for quick selection.
 - Add a hex color input field.
 - Add HSL controls for alternative color editing.
